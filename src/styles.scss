@@ -1,0 +1,74 @@
+@use '@angular/material' as mat;
+
+html {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      primary: mat.$red-palette,
+      tertiary: mat.$azure-palette,
+      theme-type: light,
+    ),
+    typography: (
+      brand-family: 'Fraunces, Georgia, serif',
+      plain-family: '"IBM Plex Sans", system-ui, sans-serif',
+      bold-weight: 600,
+      medium-weight: 500,
+      regular-weight: 400,
+    ),
+    density: 0,
+  ));
+
+  // identidade do projeto por cima do M3
+  @include mat.theme-overrides((
+    primary: #9a3a1a,
+    on-primary: #ffffff,
+    surface: #f1eee6,
+    on-surface: #16181d,
+    on-surface-variant: #3a3d45,
+    surface-container-low: #f7f5ef,
+    surface-container: #ece8de,
+    outline-variant: #d6d0c2,
+  ));
+
+  --ap-ink: #16181d;
+  --ap-paper: #f1eee6;
+  --ap-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --ap-max: 1200px;
+  --ap-gutter: clamp(20px, 5vw, 96px);
+  --ap-ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-large);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--mat-sys-display-large-font); font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+a { color: inherit; }
+
+.container { width: min(100% - 2 * var(--ap-gutter), var(--ap-max)); margin-inline: auto; }
+
+:focus-visible { outline: 2px solid var(--mat-sys-primary); outline-offset: 3px; }
+
+// revelação ao rolar, usada com moderação via [appReveal]
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    transition: opacity 600ms var(--ap-ease), transform 600ms var(--ap-ease);
+  }
+  .reveal:not(.is-visible) { opacity: 0; transform: translateY(20px); }
+}
+
+// transição entre páginas (router withViewTransitions)
+::view-transition-old(root) { animation: 180ms var(--ap-ease) both ap-fade-out; }
+::view-transition-new(root) { animation: 320ms var(--ap-ease) both ap-fade-in; }
+@keyframes ap-fade-out { to { opacity: 0; } }
+@keyframes ap-fade-in { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}

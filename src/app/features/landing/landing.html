@@ -1,0 +1,113 @@
+<section class="hero container">
+  <p class="kicker">The Architect's Playbook</p>
+  <h1>Seu sistema de transição já é o próximo legado.</h1>
+  <p class="lead">
+    Engenharia de software sustentável para quem vive sistemas corporativos de verdade.
+    Arquitetura evolutiva, sistemas distribuídos e IA aplicada com fundamento.
+  </p>
+  <div class="actions">
+    <a mat-flat-button routerLink="/manifesto">Ler o manifesto</a>
+    <a mat-stroked-button routerLink="/roteiro">Ver o roteiro do desenvolvedor</a>
+  </div>
+</section>
+
+<section class="diagnosis">
+  <div class="container">
+    <h2>Se alguma dessas frases já foi dita no seu time, este conteúdo é para você.</h2>
+    <ul class="quotes">
+      <li>“Depois da migração a gente arruma.”</li>
+      <li>“Coloca esse produto novo no sistema novo, ele já está no ar.”</li>
+      <li>“A IA gerou, os testes passaram, pode subir.”</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container section" id="manifesto">
+  <header class="section-head">
+    <h2>Três teses sobre o que realmente quebra sistemas corporativos.</h2>
+    <a mat-button routerLink="/manifesto">Manifesto completo</a>
+  </header>
+  <div class="theses">
+    @for (t of theses; track t.title) {
+      <article class="thesis" appReveal>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.body }}</p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="container section">
+  <header class="section-head">
+    <h2>As dores que o mercado inteiro repete.</h2>
+  </header>
+  <div class="grid-3">
+    @for (a of antiPatterns; track a.title) {
+      <mat-card appearance="outlined" class="ap-card">
+        <mat-card-content>
+          <mat-icon class="ap-icon" aria-hidden="true">{{ a.icon }}</mat-icon>
+          <h3>{{ a.title }}</h3>
+          <p>{{ a.body }}</p>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</section>
+
+@defer (on viewport; hydrate on viewport) {
+  <section class="container section deep">
+    <div class="deep-text">
+      <p class="pillar">Deep dive em sistemas distribuídos</p>
+      <h2>Retry infinito não é resiliência. É um ataque que você fez contra si mesmo.</h2>
+      <p>
+        Como retentativas cegas, somadas a falhas de concorrência, transformam uma instabilidade pontual em efeito cascata.
+        E o que configurar no lugar: backoff, limite de tentativas, dead letter e idempotência.
+      </p>
+      <a mat-flat-button routerLink="/blog/retry-infinito-nao-e-resiliencia">Ler o artigo</a>
+    </div>
+    <figure class="code">
+      <button mat-icon-button class="copy" aria-label="Copiar código" matTooltip="Copiar"
+              [cdkCopyToClipboard]="snippet" (cdkCopyToClipboardCopied)="copied($event, 'Código')">
+        <mat-icon>content_copy</mat-icon>
+      </button>
+      <pre><code>{{ snippet }}</code></pre>
+    </figure>
+  </section>
+} @placeholder {
+  <div class="container section" style="min-height: 420px"></div>
+}
+
+<section class="container section">
+  <header class="section-head">
+    <h2>Fundamentos primeiro. IA como multiplicador.</h2>
+    <a mat-button routerLink="/roteiro">Roteiro completo</a>
+  </header>
+  <ol class="phases">
+    @for (p of phases; track p.title; let i = $index) {
+      <li class="phase">
+        <span class="phase-n">Fase {{ i + 1 }}</span>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.body }}</p>
+      </li>
+    }
+  </ol>
+</section>
+
+<section class="support" id="apoiar">
+  <div class="container support-grid">
+    <div>
+      <h2>Conteúdo gratuito. Servidores nem tanto.</h2>
+      <p>
+        Apoie este projeto para manter os servidores no ar. Em troca, continuo mapeando os desafios reais da arquitetura
+        corporativa e publicando roteiros gratuitos de como unir fundamentos sólidos ao desenvolvimento com Inteligência Artificial.
+      </p>
+    </div>
+    <div class="support-actions">
+      <a mat-flat-button class="on-dark" href="[LINK APOIA.SE]" target="_blank" rel="noopener">Apoiar no Apoia.se</a>
+      <a mat-flat-button class="on-dark" href="[LINK BUY ME A COFFEE]" target="_blank" rel="noopener">Buy Me a Coffee</a>
+      <button mat-stroked-button class="pix" [cdkCopyToClipboard]="pixKey" (cdkCopyToClipboardCopied)="copied($event, 'Chave PIX')">
+        <mat-icon>content_copy</mat-icon> Copiar chave PIX
+      </button>
+    </div>
+  </div>
+</section>
