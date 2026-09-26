@@ -93,21 +93,18 @@
   </ol>
 </section>
 
-<section class="support" id="apoiar">
+<section class="support">
   <div class="container support-grid">
     <div>
-      <h2>Conteúdo gratuito. Servidores nem tanto.</h2>
+      <h2>Conteúdo educativo sobre arquitetura de software.</h2>
       <p>
-        Apoie este projeto para manter os servidores no ar. Em troca, continuo mapeando os desafios reais da arquitetura
-        corporativa e publicando roteiros gratuitos de como unir fundamentos sólidos ao desenvolvimento com Inteligência Artificial.
+        Anti-padrões reais de sistemas distribuídos, com o erro, a causa e a correção. Comece pelos artigos
+        ou pelo manifesto.
       </p>
     </div>
     <div class="support-actions">
-      <a mat-flat-button class="on-dark" href="[LINK APOIA.SE]" target="_blank" rel="noopener">Apoiar no Apoia.se</a>
-      <a mat-flat-button class="on-dark" href="[LINK BUY ME A COFFEE]" target="_blank" rel="noopener">Buy Me a Coffee</a>
-      <button mat-stroked-button class="pix" [cdkCopyToClipboard]="pixKey" (cdkCopyToClipboardCopied)="copied($event, 'Chave PIX')">
-        <mat-icon>content_copy</mat-icon> Copiar chave PIX
-      </button>
+      <a mat-flat-button class="on-dark" routerLink="/blog">Ver os artigos</a>
+      <a mat-flat-button class="on-dark" routerLink="/manifesto">Ler o manifesto</a>
     </div>
   </div>
 </section>

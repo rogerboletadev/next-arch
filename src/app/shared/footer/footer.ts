@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
         <a routerLink="/roteiro">Roteiro</a>
         <a routerLink="/fundador">Fundador</a>
       </nav>
-      <p class="legal">Projeto pessoal. Opiniões e exemplos são de autoria própria e não representam nenhuma empresa.</p>
+      <p class="legal">Site educativo e projeto pessoal, sem fins comerciais. Opiniões e exemplos são de autoria própria e não representam nenhuma empresa.</p>
     </footer>
   `,
   styles: `

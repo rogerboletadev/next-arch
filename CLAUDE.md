@@ -38,6 +38,10 @@ vercel.json             cabeçalhos de segurança (CSP, HSTS etc.)
 
 Site 100% estático. Se adicionar scripts, fontes ou imagens de outros domínios, atualizar a CSP em `vercel.json` e testar no navegador (o prerender usa scripts inline, por isso `script-src 'unsafe-inline'`).
 
+## Escopo do site (importante)
+
+Site educativo e pessoal, sem fins comerciais. O dono trabalha em banco e precisa evitar qualquer conflito com políticas do empregador. Portanto: sem doação, apoio, anúncios ou monetização; sem citar empresa, cliente ou fatos de produção reais; exemplos sempre genéricos e didáticos; manter o aviso de "projeto pessoal" no rodapé e na página do fundador.
+
 ## Regras de trabalho
 
 - Nunca usar tokens/senhas colados no chat; `git push` é feito pelo dono (autenticação dele). Commitar localmente é ok quando pedido.

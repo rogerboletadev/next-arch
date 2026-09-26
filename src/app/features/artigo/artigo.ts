@@ -17,8 +17,8 @@ import { ArticleService } from '../../core/content/article.service';
         <p class="lead">{{ a.summary }}</p>
         <div class="prose" [innerHTML]="html()"></div>
         <aside class="support">
-          <p>Este conteúdo é gratuito e mantido pela comunidade.</p>
-          <a mat-flat-button routerLink="/" fragment="apoiar">Apoiar o projeto</a>
+          <p>Quer continuar aprendendo? Veja os outros artigos.</p>
+          <a mat-flat-button routerLink="/blog">Ver todos os artigos</a>
         </aside>
       </article>
     } @else {

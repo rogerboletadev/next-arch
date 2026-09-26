@@ -22,7 +22,6 @@ export class Landing {
   readonly antiPatterns = ANTI_PATTERNS;
   readonly phases = PHASES;
   readonly snippet = RETRY_SNIPPET;
-  readonly pixKey = '[SUA CHAVE PIX]';
 
   copied(ok: boolean, what: string) {
     this.snack.open(ok ? `${what} copiado` : 'Não foi possível copiar', undefined, { duration: 2500 });

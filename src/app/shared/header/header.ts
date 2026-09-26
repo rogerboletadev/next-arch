@@ -21,7 +21,6 @@ import { MatIconModule } from '@angular/material/icon';
           @for (link of links; track link.path) {
             <a [routerLink]="link.path" routerLinkActive="active" class="nav-link">{{ link.label }}</a>
           }
-          <a routerLink="/" fragment="apoiar" class="cta">Apoiar o projeto</a>
         </nav>
 
         <button type="button" class="burger" [attr.aria-expanded]="open()" aria-controls="menu-mobile"
@@ -35,7 +34,6 @@ import { MatIconModule } from '@angular/material/icon';
           @for (link of links; track link.path) {
             <a [routerLink]="link.path" routerLinkActive="active" class="panel-link" (click)="close()">{{ link.label }}</a>
           }
-          <a routerLink="/" fragment="apoiar" class="panel-cta" (click)="close()">Apoiar o projeto</a>
         </nav>
       }
     </header>
@@ -66,11 +64,6 @@ import { MatIconModule } from '@angular/material/icon';
       content: ''; position: absolute; left: 14px; right: 14px; bottom: 2px; height: 2px;
       background: var(--mat-sys-primary); border-radius: 2px;
     }
-    .cta {
-      margin-left: 12px; padding: 10px 20px; text-decoration: none; font-weight: 600; font-size: 15px;
-      background: var(--mat-sys-primary); color: var(--mat-sys-on-primary); border-radius: 999px; transition: filter 150ms;
-    }
-    .cta:hover { filter: brightness(1.12); }
 
     .burger {
       display: none; align-items: center; justify-content: center; width: 48px; height: 48px;
@@ -88,11 +81,6 @@ import { MatIconModule } from '@angular/material/icon';
       font-size: 18px; font-weight: 500; border-radius: 10px; border-bottom: 1px solid var(--mat-sys-outline-variant);
     }
     .panel-link.active { color: var(--mat-sys-primary); background: var(--mat-sys-surface-container-low); }
-    .panel-cta {
-      display: flex; align-items: center; justify-content: center; min-height: 52px; margin-top: 16px;
-      text-decoration: none; font-weight: 600; font-size: 17px; border-radius: 999px;
-      background: var(--mat-sys-primary); color: var(--mat-sys-on-primary);
-    }
 
     @media (max-width: 860px) {
       .nav { display: none; }

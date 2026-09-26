@@ -14,7 +14,7 @@ export const FOUNDER = {
     'Aqui você encontra anti-padrões recorrentes de arquitetura, com o erro, a causa e a correção, e o raciocínio por trás de cada um. Os exemplos são genéricos e didáticos.',
   ],
   focus: ['Java e Spring', 'Sistemas distribuídos', 'Integrações e mensageria', 'Resiliência', 'Arquitetura evolutiva'],
-  disclaimer: 'Este é um projeto pessoal. As opiniões e os exemplos aqui são de autoria própria e não representam nenhuma empresa ou cliente.',
+  disclaimer: 'Este é um site educativo e um projeto pessoal, sem fins comerciais. As opiniões e os exemplos aqui são de autoria própria e não representam nenhuma empresa ou cliente.',
   links: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rogerio-cardoso-de-oliveira/' },
     { label: 'GitHub', url: 'https://github.com/rogerboletadev' },
