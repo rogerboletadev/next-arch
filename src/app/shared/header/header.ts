@@ -97,6 +97,7 @@ export class Header {
     { path: '/manifesto', label: 'Manifesto' },
     { path: '/blog', label: 'Artigos' },
     { path: '/roteiro', label: 'Roteiro' },
+    { path: '/treinamento', label: 'Treinamento IA' },
     { path: '/fundador', label: 'Fundador' },
   ];
 

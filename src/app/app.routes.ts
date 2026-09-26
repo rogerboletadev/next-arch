@@ -7,5 +7,7 @@ export const routes: Routes = [
   { path: 'blog/:slug', loadComponent: () => import('./features/artigo/artigo').then(m => m.Artigo) },
   { path: 'fundador', title: 'Fundador | Arquitetura Pragmática', loadComponent: () => import('./features/fundador/fundador').then(m => m.Fundador) },
   { path: 'roteiro', title: 'Roteiro do Desenvolvedor | Arquitetura Pragmática', loadComponent: () => import('./features/roteiro/roteiro').then(m => m.Roteiro) },
+  { path: 'treinamento', title: 'Treinamento IA | Arquitetura Pragmática', loadComponent: () => import('./features/treinamento/treinamento').then(m => m.Treinamento) },
+  { path: 'treinamento/:slug', loadComponent: () => import('./features/treinamento/topico').then(m => m.Topico) },
   { path: '**', redirectTo: '' },
 ];
