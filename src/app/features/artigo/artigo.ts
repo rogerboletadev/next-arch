@@ -46,7 +46,7 @@ import { ArticleService } from '../../core/content/article.service';
     .prose { font-size: 19px; line-height: 1.75; }
     .prose ::ng-deep h2 { font-size: 32px; margin: 56px 0 16px; }
     .prose ::ng-deep p { margin-bottom: 20px; }
-    .prose ::ng-deep pre { background: var(--ap-ink); color: #d9d5cb; padding: 28px; overflow-x: auto; border-radius: 4px; font: 15px/1.7 var(--ap-mono); margin: 28px 0; }
+    .prose ::ng-deep pre { background: var(--ap-ink); color: var(--ap-code-fg); padding: 20px; overflow-x: auto; border-radius: 4px; font: 15px/1.7 var(--ap-mono); margin: 28px 0; }
     .support { margin-top: 72px; padding: 32px; background: var(--mat-sys-surface-container); display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; }
   `,
 })

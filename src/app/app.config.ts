@@ -10,6 +10,7 @@ import {
   withViewTransitions,
 } from '@angular/router';
 import { provideClientHydration, withIncrementalHydration } from '@angular/platform-browser';
+import { MAT_ICON_DEFAULT_OPTIONS } from '@angular/material/icon';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -23,5 +24,6 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({ scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled' }),
     ),
     provideClientHydration(withIncrementalHydration()),
+    { provide: MAT_ICON_DEFAULT_OPTIONS, useValue: { fontSet: 'material-symbols-outlined' } },
   ],
 };
