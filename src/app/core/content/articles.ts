@@ -1,3 +1,5 @@
+import { JAVA_ARTICLES } from './articles-java';
+
 export interface Article {
   slug: string;
   title: string;
@@ -9,6 +11,7 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  ...JAVA_ARTICLES,
   {
     slug: 'retry-infinito-nao-e-resiliencia',
     title: 'Retry infinito não é resiliência',

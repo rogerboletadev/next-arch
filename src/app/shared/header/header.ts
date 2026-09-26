@@ -64,6 +64,7 @@ export class Header {
     { path: '/manifesto', label: 'Manifesto' },
     { path: '/blog', label: 'Artigos' },
     { path: '/roteiro', label: 'Roteiro' },
+    { path: '/fundador', label: 'Fundador' },
   ];
 
   readonly isHandset = toSignal(

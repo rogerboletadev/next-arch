@@ -12,6 +12,7 @@ import { RouterLink } from '@angular/router';
         <a routerLink="/manifesto">Manifesto</a>
         <a routerLink="/blog">Artigos</a>
         <a routerLink="/roteiro">Roteiro</a>
+        <a routerLink="/fundador">Fundador</a>
       </nav>
     </footer>
   `,
