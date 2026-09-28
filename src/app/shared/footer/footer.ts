@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   template: `
     <footer class="container foot">
-      <strong class="name">Arquitetura Pragmática</strong>
+      <strong class="name">AndaimeTech</strong>
       <p>Engenharia do mundo real. Sem tutorial perfeito.</p>
       <nav aria-label="Rodapé">
         <a routerLink="/manifesto">Manifesto</a>

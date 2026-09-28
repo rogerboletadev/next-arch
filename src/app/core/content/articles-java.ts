@@ -55,14 +55,14 @@ Todo método agendado deve responder a duas perguntas: "o que acontece se rodar 
 `,
   },
   {
-    slug: 'caracteres-especiais-sybase-driver-legado',
-    title: 'Caracteres especiais no Sybase: isolar o driver legado em vez de brigar com ele',
+    slug: 'caracteres-especiais-banco-legado-driver',
+    title: 'Caracteres especiais em banco legado: isolar o driver antigo em vez de brigar com ele',
     summary: 'Quando o driver moderno corrompe acentos ao gravar, um componente pequeno com o driver antigo resolve sem contaminar o resto do sistema.',
     pillar: 'Anti-padrões',
     date: '2026-10-15',
     readingMinutes: 7,
     markdown: `
-O sintoma é conhecido: o texto entra com acento e cedilha e chega na base como \`?\` ou como caracteres trocados. Ou pior, a gravação falha com erro de conversão. O sistema é moderno, o banco Sybase não é.
+O sintoma é conhecido: o texto entra com acento e cedilha e chega na base como \`?\` ou como caracteres trocados. Ou pior, a gravação falha com erro de conversão. O sistema é moderno, o banco de dados legado não é. Vale para qualquer banco antigo com charset próprio.
 
 ## Onde o problema costuma nascer
 

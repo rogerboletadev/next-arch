@@ -8,13 +8,13 @@ import { MatIconModule } from '@angular/material/icon';
   template: `
     <header class="bar">
       <div class="bar-inner">
-        <a routerLink="/" class="brand" aria-label="Arquitetura Pragmática, página inicial" (click)="close()">
+        <a routerLink="/" class="brand" aria-label="AndaimeTech, página inicial" (click)="close()">
           <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="26" height="26" />
             <path d="M3 16h26M16 3v26" />
             <rect x="16" y="16" width="13" height="13" class="brand-fill" stroke="none" />
           </svg>
-          <span class="brand-text">Arquitetura Pragmática</span>
+          <span class="brand-text">AndaimeTech</span>
         </a>
 
         <nav class="nav" aria-label="Principal">

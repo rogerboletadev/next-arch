@@ -66,7 +66,7 @@ export class Artigo {
     effect(() => {
       const a = this.article();
       if (!a) return;
-      this.title.setTitle(`${a.title} | Arquitetura Pragmática`);
+      this.title.setTitle(`${a.title} | AndaimeTech`);
       this.meta.updateTag({ name: 'description', content: a.summary });
       this.meta.updateTag({ property: 'og:title', content: a.title });
       this.meta.updateTag({ property: 'og:description', content: a.summary });

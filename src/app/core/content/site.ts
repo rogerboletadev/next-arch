@@ -7,10 +7,10 @@ export interface SocialLink {
 export const FOUNDER = {
   name: 'Rogério Cardoso',
   initials: 'RC',
-  role: 'Fundador da Arquitetura Pragmática',
+  role: 'Criador do AndaimeTech',
   bio: [
     'Sou engenheiro de software e atuo com sistemas corporativos em Java, integrações e arquitetura de sistemas distribuídos. Escrevo sobre o que aprendi construindo e evoluindo esse tipo de sistema.',
-    'Criei a Arquitetura Pragmática porque o mesmo padrão se repete no mercado: sistemas que nascem para substituir um legado e acabam virando o próximo. A resposta quase nunca é mais tecnologia. É fronteira clara, resiliência básica bem feita e decisões documentadas.',
+    'Criei o AndaimeTech porque o mesmo padrão se repete no mercado: sistemas que nascem para substituir um legado e acabam virando o próximo. A resposta quase nunca é mais tecnologia. É fronteira clara, resiliência básica bem feita e decisões documentadas.',
     'Aqui você encontra anti-padrões recorrentes de arquitetura, com o erro, a causa e a correção, e o raciocínio por trás de cada um. Os exemplos são genéricos e didáticos.',
   ],
   focus: ['Java e Spring', 'Sistemas distribuídos', 'Integrações e mensageria', 'Resiliência', 'Arquitetura evolutiva'],
